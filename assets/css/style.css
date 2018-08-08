@@ -1,0 +1,154 @@
+/* styles for the overall look of the portfolio site */
+/*********************/
+/* Colors*/
+/* black: #000000;
+grey: #666666;
+white: #FFFFFF;
+light-pink: #ED2C92;
+dark-pink: #ED2C92 */
+/*********************/
+
+/*********************/
+/* BASIC */
+/*********************/
+*{
+    box-sizing: border-box;
+}
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+    padding-top: 46px;
+	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+	margin: 0;
+	font-size: 1.3rem;
+	letter-spacing: 1px;
+}
+
+a{
+	color: dimgray;
+}
+a:focus, a:hover{
+	color: #ED2C92;
+	text-decoration: none;
+}
+img{
+    vertical-align: middle;
+}
+/*********************/
+/* MAIN */
+/*********************/
+
+.logo {
+    max-width: 19%;
+    height: auto;
+    display: block;
+    float: left;
+}
+.no-margin-top{
+	margin-top: 0;
+}
+.pb-15{
+	padding-bottom: 15px;
+}
+.mb-15{
+    margin-bottom: 15px;
+}
+.heading-border{
+    border-bottom: 2px solid dimgray;
+}
+.container{
+    width: 960px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.padding-y{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#character-img{
+    width: 100%;
+    max-width: 15%;
+    height: auto;
+    display: block;
+    float: left;
+    padding: 0 15px 15px 0;
+}
+/*********************/
+/* MAIN NAV */
+/*********************/
+.navbar-white {
+	background-color: white;
+    border: 1px solid #e7e7e7;
+    overflow-x: hidden;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.nav-links{
+    float: right;
+}
+.navbar-white a{
+    float: left;
+    text-align: center;
+    padding: 14px 0 14px 7px;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.navbar-white .icon {
+    display: none;
+}
+/*********************/
+/* FOOTER */
+/*********************/
+footer {
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 51px;
+	background-color: #222;
+    border-top: 8px solid dimgray;
+    color: white;
+}
+
+
+/*********************/
+/* RESPONSIVE */
+/*********************/
+@media screen and (max-width: 600px) {
+    /* main area */
+    .container{
+        width: 100%;
+    }
+    #character-img{
+        max-width: 100%;
+    }
+    /* navigation area */
+    .logo{
+        max-width: 44%;
+    }
+    .navbar-white a {
+        display: none;
+    }
+    .nav-links {
+        width: 100%;
+    }
+    .navbar-white a.icon {
+      float: right;
+      display: block;
+    }
+    
+    .navbar-white.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar-white.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
