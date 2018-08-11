@@ -27,6 +27,9 @@ body {
     min-height: 400px;
     margin-bottom: 100px;
     clear: both;
+    background-image: url("../images/cover.png");
+    background-position: center;
+    background-clip: padding-box;
 }
 
 a{
@@ -38,6 +41,9 @@ a:focus, a:hover{
 }
 img{
     vertical-align: middle;
+}
+ul{
+    list-style: disc;
 }
 /*********************/
 /* MAIN */
@@ -77,6 +83,12 @@ img{
     display: block;
     float: left;
     padding: 0 15px 15px 0;
+}
+section.container{
+    background-color: white;
+    border: 1px solid #e7e7e7;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 /*********************/
 /* MAIN NAV */
@@ -120,17 +132,71 @@ input[type=text], textarea {
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+.submit{
     background-color: black;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
 }
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: dimgray;
+.submit:hover {
+    background-color: #e7e7e7;
+}
+
+/*********************/
+/* PORTFOLIO */
+/*********************/
+/* Create four equal columns that floats next to each other */
+.col {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.light-grey{
+    color: #e7e7e7;
+}
+.dark-grey{
+    color: dimgray;
+}
+.white{
+    background-color: white;
+}
+.fa-layers-text:hover{
+    color: #ED2C92;
+}
+.overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 69%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
 /*********************/
 /* FOOTER */
@@ -146,11 +212,14 @@ footer {
     color: #e7e7e7;
 }
 footer p{
-    font-size: 1rem;
-    padding: 15px 0;
+    font-size: 0.7rem;
+    padding: 20px 0;
     text-align: center;
 }
-
+.smaller-image{
+    width: 50%;
+    height: 50%;
+}
 /*********************/
 /* RESPONSIVE */
 /*********************/
@@ -161,6 +230,11 @@ footer p{
     }
     #character-img{
         max-width: 100%;
+    }
+    /* portfolio area */
+    /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+    .col {
+        width: 100%;
     }
     /* navigation area */
     .logo{
@@ -176,7 +250,6 @@ footer p{
       float: right;
       display: block;
     }
-    
     .navbar-white.responsive .icon {
       position: absolute;
       right: 0;
